@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stay Golden World Tour | Ticket Listings</title>
+  <title>Stay Golden World Tour | Independent Ticket Resale</title>
   <style>
     * {
       box-sizing: border-box;
@@ -12,98 +12,144 @@
     }
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
+      background: #f3f4f6;
       color: #171717;
       line-height: 1.6;
     }
     header {
       background: #111;
       color: white;
-      padding: 22px 20px;
       text-align: center;
-    }
-    header h1 {
-      font-size: 28px;
-    }
-    header p {
-      color: #ccc;
-      margin-top: 5px;
+      padding: 20px;
     }
     nav {
-      background: #222;
-      text-align: center;
-      padding: 13px;
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 12px;
+      font-weight: bold;
       font-size: 14px;
     }
-    .hero {
-      background: white;
-      text-align: center;
-      padding: 70px 20px;
+    nav a:hover {
+      text-decoration: underline;
     }
-    .hero h2 {
-      font-size: 42px;
+    .hero {
+      background: #1d1d1d;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+    .hero h1 {
+      font-size: 44px;
       margin-bottom: 12px;
     }
     .hero p {
-      color: #555;
-      max-width: 650px;
+      max-width: 700px;
       margin: 0 auto 25px;
+      color: #d5d5d5;
+      font-size: 17px;
     }
     .button {
       display: inline-block;
-      background: #111;
-      color: white;
+      background: white;
+      color: #111;
       text-decoration: none;
-      padding: 14px 28px;
+      padding: 14px 25px;
       border-radius: 8px;
       font-weight: bold;
+      margin: 5px;
     }
     .button:hover {
-      background: #333;
+      background: #ddd;
+    }
+    .notice {
+      background: #fff3cd;
+      color: #664d03;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 13px;
     }
     .container {
       width: 92%;
       max-width: 1050px;
-      margin: 40px auto;
+      margin: 45px auto;
     }
     .section-title {
       text-align: center;
-      font-size: 29px;
-      margin-bottom: 25px;
+      font-size: 30px;
+      margin-bottom: 12px;
     }
-    .dates {
+    .section-text {
+      text-align: center;
+      color: #666;
+      max-width: 720px;
+      margin: 0 auto 30px;
+    }
+    .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 18px;
+      gap: 20px;
     }
-    .date-card {
+    .card {
       background: white;
-      padding: 23px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,.07);
+      padding: 28px 22px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,.07);
     }
-    .date-card h3 {
-      margin-bottom: 8px;
-      font-size: 20px;
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
     }
-    .date-card p {
-      color: #555;
-      margin: 4px 0;
+    .card p {
+      color: #666;
+      font-size: 14px;
     }
-    .contact {
+    .price-box {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .price-box span {
+      display: block;
+      font-size: 13px;
+      color: #777;
+      font-weight: normal;
+    }
+    .cta {
       background: white;
       text-align: center;
-      padding: 35px 20px;
+      border-radius: 16px;
+      padding: 40px 25px;
       margin-top: 45px;
-      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.07);
     }
-    .contact h2 {
+    .cta h2 {
       margin-bottom: 10px;
+    }
+    .cta p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .dark-button {
+      display: inline-block;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      padding: 14px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .contact {
+      margin-top: 35px;
+      background: white;
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
     }
     .email {
       display: inline-block;
@@ -113,10 +159,9 @@
       text-decoration: underline;
       word-break: break-word;
     }
-    .notice {
-      background: #fff3cd;
-      color: #664d03;
-      padding: 14px 20px;
+    .disclaimer {
+      margin-top: 25px;
+      color: #666;
       text-align: center;
       font-size: 13px;
     }
@@ -130,129 +175,117 @@
     }
     @media (max-width: 600px) {
       .hero {
-        padding: 50px 18px;
+        padding: 55px 18px;
       }
-      .hero h2 {
+      .hero h1 {
         font-size: 32px;
+      }
+      .hero p {
+        font-size: 15px;
+      }
+      .section-title {
+        font-size: 25px;
       }
     }
   </style>
 </head>
 <body>
 <header>
-  <h1>Stay Golden World Tour</h1>
-  <p>Independent Ticket Resale</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tickets.html">Tickets</a>
+  </nav>
 </header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="tickets.html">Tickets</a>
-</nav>
 <div class="notice">
-  Independent ticket reseller. This website is not affiliated with or endorsed by
-  Matt Rife, his management, venues, promoters, or official ticketing partners.
+  Independent ticket resale marketplace. Not affiliated with, sponsored by,
+  or endorsed by the performer, management, venues, promoters, or official
+  ticketing partners.
 </div>
 <section class="hero">
-  <h2>Stay Golden World Tour</h2>
+  <h1>Stay Golden World Tour</h1>
   <p>
-    Browse available resale ticket listings for upcoming 2026 tour dates.
-    Select your preferred event and contact the seller for current availability
-    and ticket details.
+    Browse independently listed resale tickets for selected September and
+    October 2026 dates.
   </p>
   <a class="button" href="tickets.html">
-    View Tickets
+    View Available Tickets
   </a>
 </section>
 <main class="container">
-  <h2 class="section-title">Upcoming Dates</h2>
-  <div class="dates">
-    <div class="date-card">
-      <h3>September 4, 2026</h3>
-      <p><strong>Mohegan Sun Arena</strong></p>
-      <p>Uncasville, Connecticut</p>
-      <p>8:00 PM</p>
+  <section>
+    <h2 class="section-title">Ticket Options</h2>
+    <p class="section-text">
+      Browse the current seller-provided inventory and submit a request to
+      confirm availability and ticket details.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <h3>VIP Resale</h3>
+        <p>
+          Selected VIP inventory is available for the September and October
+          listings shown on the Tickets page.
+        </p>
+        <div class="price-box">
+          $500
+          <span>Listed resale price</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Regular Resale</h3>
+        <p>
+          Regular resale inventory is available for the dates and seating
+          information displayed on the Tickets page.
+        </p>
+        <div class="price-box">
+          $200
+          <span>Listed resale price</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>September &amp; October</h3>
+        <p>
+          View the complete currently listed inventory, including sections,
+          rows, quantities, and prices.
+        </p>
+      </div>
     </div>
-    <div class="date-card">
-      <h3>September 5, 2026</h3>
-      <p><strong>Mohegan Sun Arena</strong></p>
-      <p>Uncasville, Connecticut</p>
-      <p>8:00 PM</p>
-    </div>
-    <div class="date-card">
-      <h3>September 25, 2026</h3>
-      <p><strong>Choctaw Grand Theater</strong></p>
-      <p>Durant, Oklahoma</p>
-      <p>8:00 PM</p>
-    </div>
-    <div class="date-card">
-      <h3>September 26, 2026</h3>
-      <p><strong>Choctaw Grand Theater</strong></p>
-      <p>Durant, Oklahoma</p>
-      <p>8:00 PM</p>
-    </div>
-    <div class="date-card">
-      <h3>September 27, 2026</h3>
-      <p><strong>Walmart AMP</strong></p>
-      <p>Rogers, Arkansas</p>
-      <p>7:30 PM</p>
-    </div>
-    <div class="date-card">
-      <h3>October 9, 2026</h3>
-      <p><strong>Ford Idaho Center Arena</strong></p>
-      <p>Nampa, Idaho</p>
-      <p>8:00 PM</p>
-    </div>
-    <div class="date-card">
-      <h3>October 10, 2026</h3>
-      <p><strong>Moda Center</strong></p>
-      <p>Portland, Oregon</p>
-    </div>
-    <div class="date-card">
-      <h3>October 11, 2026</h3>
-      <p><strong>Golden 1 Center</strong></p>
-      <p>Sacramento, California</p>
-    </div>
-    <div class="date-card">
-      <h3>October 18, 2026</h3>
-      <p><strong>Red Rocks Amphitheatre</strong></p>
-      <p>Morrison, Colorado</p>
-    </div>
-    <div class="date-card">
-      <h3>October 24, 2026</h3>
-      <p><strong>Bridgestone Arena</strong></p>
-      <p>Nashville, Tennessee</p>
-      <p>8:00 PM</p>
-    </div>
-    <div class="date-card">
-      <h3>October 25, 2026</h3>
-      <p><strong>Brandon Amphitheater</strong></p>
-      <p>Brandon, Mississippi</p>
-    </div>
-  </div>
-  <div style="text-align:center; margin-top:35px;">
-    <a class="button" href="tickets.html">
-      See All Ticket Listings
+  </section>
+  <section class="cta">
+    <h2>Browse the Ticket Listings</h2>
+    <p>
+      See the complete September and October inventory and request the tickets
+      you're interested in.
+    </p>
+    <a class="dark-button" href="tickets.html">
+      View Tickets
     </a>
-  </div>
+  </section>
   <section class="contact">
     <h2>Contact the Seller</h2>
     <p>
-      For ticket availability, seating information, and resale listing details,
-      contact the seller by email.
+      For questions about availability, seating, ticket transfer, or resale
+      terms, contact the seller directly.
     </p>
     <a class="email" href="mailto:steveneventticket@gmail.com">
       steveneventticket@gmail.com
     </a>
   </section>
+  <section class="disclaimer">
+    <p>
+      <strong>Important:</strong> This website is an independent ticket resale
+      marketplace. It is not affiliated with, sponsored by, or endorsed by
+      the performer, management, venues, promoters, or official ticketing
+      partners.
+    </p>
+    <p style="margin-top:10px;">
+      Prices shown are seller-provided resale prices and are not official
+      face-value prices. Availability and final ticket details should be
+      confirmed before purchase.
+    </p>
+  </section>
 </main>
 <footer>
-  <p>© 2026 Stay Golden Ticket Marketplace</p>
-  <p style="margin-top:8px;">
-    Independent ticket resale marketplace.
-  </p>
-  <p style="margin-top:8px;">
-    Prices shown on ticket listings are resale prices and are not represented
-    as official face-value prices.
-  </p>
+  <p>© 2026 Independent Ticket Resale Marketplace</p>
 </footer>
 </body>
 </html>
