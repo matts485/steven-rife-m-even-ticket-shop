@@ -1,154 +1,606 @@
-
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stay Golden World Tour | Ticket Listings</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #171717;
+      line-height: 1.6;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 25px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 29px;
+      margin-bottom: 5px;
+    }
+    header p {
+      color: #ccc;
+    }
+    nav {
+      background: #222;
+      text-align: center;
+      padding: 13px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 14px;
+    }
+    .notice {
+      background: #fff3cd;
+      color: #664d03;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .intro h2 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    .intro p {
+      color: #666;
+    }
+    .month-title {
+      font-size: 25px;
+      margin: 35px 0 15px;
+    }
+    .event-card {
+      background: white;
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 18px rgba(0,0,0,.07);
+    }
+    .event-card h3 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    .event-date {
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .event-info {
+      color: #555;
+      margin: 4px 0;
+    }
+    .tickets {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .ticket {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .ticket h4 {
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+    .price {
+      font-size: 27px;
+      font-weight: bold;
+      margin: 12px 0 3px;
+    }
+    .resale-label {
+      color: #666;
+      font-size: 13px;
+    }
+    .availability {
+      color: #555;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+    .email-button {
+      display: block;
+      text-align: center;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 7px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    .email-button:hover {
+      background: #333;
+    }
+    .contact-section,
+    .disclaimer {
+      background: white;
+      border-radius: 14px;
+      padding: 30px;
+      margin-top: 35px;
+      text-align: center;
+    }
+    .contact-section h2,
+    .disclaimer h3 {
+      margin-bottom: 10px;
+    }
+    .email-link {
+      display: inline-block;
+      margin-top: 15px;
+      color: #111;
+      font-weight: bold;
+      text-decoration: underline;
+      word-break: break-word;
+    }
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 55px;
+      font-size: 13px;
+    }
+    @media (max-width: 600px) {
+      .intro h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Steven Ticket Marketplace</h1>
-    <p>Independent Ticket Resale</p>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="tickets.html">Tickets</a>
-  </nav>
-  <div class="notice">
-    Independent ticket reseller. This website is not affiliated with or endorsed by
-    Matt Rife, his management, venues, or official ticketing partners.
-  </div>
-  <main class="container">
-    <section class="intro">
-      <h2>Available Ticket Listings</h2>
-      <p>
-        Browse the listings below. Prices shown are resale prices and may differ
-        from the original ticket price.
-      </p>
-    </section>
-    <section class="events">
-      <article class="event-card">
-        <h3>Mohegan Sun Arena</h3>
-        <p class="info">
-          <strong>Date:</strong> September 4, 2026
-        </p>
-        <p class="info">
-          <strong>Location:</strong> Uncasville, Connecticut
-        </p>
-        <p class="info">
-          <strong>Time:</strong> 8:00 PM
-        </p>
-        <div class="tickets">
-          <div class="ticket-row">
-            <strong>General Listing</strong>
-            <p>Section and seat details provided before purchase.</p>
-            <div class="resale-price">Contact for current price</div>
-            <div class="availability">Availability must be confirmed.</div>
-            <a class="contact-button" href="#contact">
-              Contact Seller
-            </a>
-          </div>
+<header>
+  <h1>Stay Golden World Tour</h1>
+  <p>Independent Ticket Resale Listings</p>
+</header>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="tickets.html">Tickets</a>
+</nav>
+<div class="notice">
+  Independent ticket reseller. This website is not affiliated with or endorsed by
+  Matt Rife, his management, venues, promoters, or official ticketing partners.
+</div>
+<main class="container">
+  <section class="intro">
+    <h2>September & October 2026</h2>
+    <p>
+      Resale tickets are listed below. Prices shown are seller-provided resale
+      prices and are not official face-value prices.
+    </p>
+  </section>
+  <!-- ==================== SEPTEMBER ==================== -->
+  <h2 class="month-title">September 2026</h2>
+  <!-- SEPTEMBER 4 -->
+  <article class="event-card">
+    <h3>Mohegan Sun Arena</h3>
+    <p class="event-date">September 4, 2026 — 8:00 PM</p>
+    <p class="event-info">Uncasville, Connecticut</p>
+    <div class="tickets">
+      <div class="ticket">
+        <h4>VIP Ticket</h4>
+        <p>VIP resale listing</p>
+        <div class="price">$500</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
         </div>
-      </article>
-      <article class="event-card">
-        <h3>Mohegan Sun Arena</h3>
-        <p class="info">
-          <strong>Date:</strong> September 5, 2026
-        </p>
-        <p class="info">
-          <strong>Location:</strong> Uncasville, Connecticut
-        </p>
-        <p class="info">
-          <strong>Time:</strong> 8:00 PM
-        </p>
-        <div class="tickets">
-          <div class="ticket-row">
-            <strong>General Listing</strong>
-            <p>Section and seat details provided before purchase.</p>
-            <div class="resale-price">Contact for current price</div>
-            <div class="availability">Availability must be confirmed.</div>
-            <a class="contact-button" href="#contact">
-              Contact Seller
-            </a>
-          </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=September%204%20VIP%20Ticket">
+          Email Seller
+        </a>
+      </div>
+      <div class="ticket">
+        <h4>Regular Ticket</h4>
+        <p>Regular resale listing</p>
+        <div class="price">$200</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
         </div>
-      </article>
-      <article class="event-card">
-        <h3>Choctaw Grand Theater</h3>
-        <p class="info">
-          <strong>Date:</strong> September 25, 2026
-        </p>
-        <p class="info">
-          <strong>Location:</strong> Durant, Oklahoma
-        </p>
-        <p class="info">
-          <strong>Time:</strong> 8:00 PM
-        </p>
-        <div class="tickets">
-          <div class="ticket-row">
-            <strong>General Listing</strong>
-            <p>Section and seat details provided before purchase.</p>
-            <div class="resale-price">Contact for current price</div>
-            <div class="availability">Availability must be confirmed.</div>
-            <a class="contact-button" href="#contact">
-              Contact Seller
-            </a>
-          </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=September%204%20Regular%20Ticket">
+          Email Seller
+        </a>
+      </div>
+    </div>
+  </article>
+  <!-- SEPTEMBER 5 -->
+  <article class="event-card">
+    <h3>Mohegan Sun Arena</h3>
+    <p class="event-date">September 5, 2026 — 8:00 PM</p>
+    <p class="event-info">Uncasville, Connecticut</p>
+    <div class="tickets">
+      <div class="ticket">
+        <h4>VIP Ticket</h4>
+        <p>VIP resale listing</p>
+        <div class="price">$500</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
         </div>
-      </article>
-      <article class="event-card">
-        <h3>Choctaw Grand Theater</h3>
-        <p class="info">
-          <strong>Date:</strong> September 26, 2026
-        </p>
-        <p class="info">
-          <strong>Location:</strong> Durant, Oklahoma
-        </p>
-        <p class="info">
-          <strong>Time:</strong> 8:00 PM
-        </p>
-        <div class="tickets">
-          <div class="ticket-row">
-            <strong>General Listing</strong>
-            <p>Section and seat details provided before purchase.</p>
-            <div class="resale-price">Contact for current price</div>
-            <div class="availability">Availability must be confirmed.</div>
-            <a class="contact-button" href="#contact">
-              Contact Seller
-            </a>
-          </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=September%205%20VIP%20Ticket">
+          Email Seller
+        </a>
+      </div>
+      <div class="ticket">
+        <h4>Regular Ticket</h4>
+        <p>Regular resale listing</p>
+        <div class="price">$200</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
         </div>
-      </article>
-    </section>
-    <section class="disclaimer" id="contact">
-      <h3>Ticket & Resale Information</h3>
-      <p>
-        This website is operated by an independent ticket reseller and is not
-        affiliated with or endorsed by Matt Rife, his management, the venues,
-        promoters, or official ticketing partners.
-      </p>
-      <p style="margin-top: 12px;">
-        Ticket availability, seating information, pricing, and transfer
-        eligibility should be verified before any purchase.
-      </p>
-      <p style="margin-top: 12px;">
-        This page does not collect payment or card information.
-      </p>
-    </section>
-  </main>
-  <footer>
-    <p>© 2026 Steven Ticket Marketplace</p>
-    <p style="margin-top: 7px;">Independent ticket resale marketplace.</p>
-  </footer>
-<section style="background:#fff; padding:30px; margin:30px auto; max-width:900px; text-align:center; border-radius:12px;">
-  <h2>Contact the Seller</h2>
-  <p style="margin-top:10px;">For ticket questions or listing information:</p>
-  <p style="margin-top:15px;">
-    <a href="mailto:steveneventticket@gmail.com">
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=September%205%20Regular%20Ticket">
+          Email Seller
+        </a>
+      </div>
+    </div>
+  </article>
+  <!-- SEPTEMBER 25 -->
+  <article class="event-card">
+    <h3>Choctaw Grand Theater</h3>
+    <p class="event-date">September 25, 2026 — 8:00 PM</p>
+    <p class="event-info">Durant, Oklahoma</p>
+    <div class="tickets">
+      <div class="ticket">
+        <h4>VIP Ticket</h4>
+        <p>VIP resale listing</p>
+        <div class="price">$500</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=September%2025%20VIP%20Ticket">
+          Email Seller
+        </a>
+      </div>
+      <div class="ticket">
+        <h4>Regular Ticket</h4>
+        <p>Regular resale listing</p>
+        <div class="price">$200</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=September%2025%20Regular%20Ticket">
+          Email Seller
+        </a>
+      </div>
+    </div>
+  </article>
+  <!-- SEPTEMBER 26 -->
+  <article class="event-card">
+    <h3>Choctaw Grand Theater</h3>
+    <p class="event-date">September 26, 2026 — 8:00 PM</p>
+    <p class="event-info">Durant, Oklahoma</p>
+    <div class="tickets">
+      <div class="ticket">
+        <h4>VIP Ticket</h4>
+        <p>VIP resale listing</p>
+        <div class="price">$500</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=September%2026%20VIP%20Ticket">
+          Email Seller
+        </a>
+      </div>
+      <div class="ticket">
+        <h4>Regular Ticket</h4>
+        <p>Regular resale listing</p>
+        <div class="price">$200</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=September%2026%20Regular%20Ticket">
+          Email Seller
+        </a>
+      </div>
+    </div>
+  </article>
+  <!-- SEPTEMBER 27 -->
+  <article class="event-card">
+    <h3>Walmart AMP</h3>
+    <p class="event-date">September 27, 2026 — 7:30 PM</p>
+    <p class="event-info">Rogers, Arkansas</p>
+    <div class="tickets">
+      <div class="ticket">
+        <h4>VIP Ticket</h4>
+        <p>VIP resale listing</p>
+        <div class="price">$500</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=September%2027%20VIP%20Ticket">
+          Email Seller
+        </a>
+      </div>
+      <div class="ticket">
+        <h4>Regular Ticket</h4>
+        <p>Regular resale listing</p>
+        <div class="price">$200</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=September%2027%20Regular%20Ticket">
+          Email Seller
+        </a>
+      </div>
+    </div>
+  </article>
+  <!-- ==================== OCTOBER ==================== -->
+  <h2 class="month-title">October 2026</h2>
+  <!-- OCTOBER 9 -->
+  <article class="event-card">
+    <h3>Ford Idaho Center Arena</h3>
+    <p class="event-date">October 9, 2026 — 8:00 PM</p>
+    <p class="event-info">Nampa, Idaho</p>
+    <div class="tickets">
+      <div class="ticket">
+        <h4>VIP Ticket</h4>
+        <p>VIP resale listing</p>
+        <div class="price">$500</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%209%20VIP%20Ticket">
+          Email Seller
+        </a>
+      </div>
+      <div class="ticket">
+        <h4>Regular Ticket</h4>
+        <p>Regular resale listing</p>
+        <div class="price">$200</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%209%20Regular%20Ticket">
+          Email Seller
+        </a>
+      </div>
+    </div>
+  </article>
+  <!-- OCTOBER 10 -->
+  <article class="event-card">
+    <h3>Moda Center</h3>
+    <p class="event-date">October 10, 2026</p>
+    <p class="event-info">Portland, Oregon</p>
+    <div class="tickets">
+      <div class="ticket">
+        <h4>VIP Ticket</h4>
+        <p>VIP resale listing</p>
+        <div class="price">$500</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%2010%20VIP%20Ticket">
+          Email Seller
+        </a>
+      </div>
+      <div class="ticket">
+        <h4>Regular Ticket</h4>
+        <p>Regular resale listing</p>
+        <div class="price">$200</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%2010%20Regular%20Ticket">
+          Email Seller
+        </a>
+      </div>
+    </div>
+  </article>
+  <!-- OCTOBER 11 -->
+  <article class="event-card">
+    <h3>Golden 1 Center</h3>
+    <p class="event-date">October 11, 2026</p>
+    <p class="event-info">Sacramento, California</p>
+    <div class="tickets">
+      <div class="ticket">
+        <h4>VIP Ticket</h4>
+        <p>VIP resale listing</p>
+        <div class="price">$500</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%2011%20VIP%20Ticket">
+          Email Seller
+        </a>
+      </div>
+      <div class="ticket">
+        <h4>Regular Ticket</h4>
+        <p>Regular resale listing</p>
+        <div class="price">$200</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%2011%20Regular%20Ticket">
+          Email Seller
+        </a>
+      </div>
+    </div>
+  </article>
+  <!-- OCTOBER 18 -->
+  <article class="event-card">
+    <h3>Red Rocks Amphitheatre</h3>
+    <p class="event-date">October 18, 2026</p>
+    <p class="event-info">Morrison, Colorado</p>
+    <div class="tickets">
+      <div class="ticket">
+        <h4>VIP Ticket</h4>
+        <p>VIP resale listing</p>
+        <div class="price">$500</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%2018%20VIP%20Ticket">
+          Email Seller
+        </a>
+      </div>
+      <div class="ticket">
+        <h4>Regular Ticket</h4>
+        <p>Regular resale listing</p>
+        <div class="price">$200</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%2018%20Regular%20Ticket">
+          Email Seller
+        </a>
+      </div>
+    </div>
+  </article>
+  <!-- OCTOBER 24 -->
+  <article class="event-card">
+    <h3>Bridgestone Arena</h3>
+    <p class="event-date">October 24, 2026 — 8:00 PM</p>
+    <p class="event-info">Nashville, Tennessee</p>
+    <div class="tickets">
+      <div class="ticket">
+        <h4>VIP Ticket</h4>
+        <p>VIP resale listing</p>
+        <div class="price">$500</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%2024%20VIP%20Ticket">
+          Email Seller
+        </a>
+      </div>
+      <div class="ticket">
+        <h4>Regular Ticket</h4>
+        <p>Regular resale listing</p>
+        <div class="price">$200</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%2024%20Regular%20Ticket">
+          Email Seller
+        </a>
+      </div>
+    </div>
+  </article>
+  <!-- OCTOBER 25 -->
+  <article class="event-card">
+    <h3>Brandon Amphitheater</h3>
+    <p class="event-date">October 25, 2026</p>
+    <p class="event-info">Brandon, Mississippi</p>
+    <div class="tickets">
+      <div class="ticket">
+        <h4>VIP Ticket</h4>
+        <p>VIP resale listing</p>
+        <div class="price">$500</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%2025%20VIP%20Ticket">
+          Email Seller
+        </a>
+      </div>
+      <div class="ticket">
+        <h4>Regular Ticket</h4>
+        <p>Regular resale listing</p>
+        <div class="price">$200</div>
+        <div class="resale-label">Resale price</div>
+        <div class="availability">
+          Contact seller to confirm current availability and ticket details.
+        </div>
+        <a class="email-button"
+           href="mailto:steveneventticket@gmail.com?subject=October%2025%20Regular%20Ticket">
+          Email Seller
+        </a>
+      </div>
+    </div>
+  </article>
+  <!-- CONTACT -->
+  <section class="contact-section">
+    <h2>Contact the Seller</h2>
+    <p>
+      For ticket questions, availability, seating information, or listing details,
+      contact the seller by email.
+    </p>
+    <a class="email-link"
+       href="mailto:steveneventticket@gmail.com">
       steveneventticket@gmail.com
     </a>
+  </section>
+  <!-- DISCLAIMER -->
+  <section class="disclaimer">
+    <h3>Important Information</h3>
+    <p>
+      This website is operated by an independent ticket reseller and is not
+      affiliated with or endorsed by Matt Rife, his management, the venues,
+      promoters, or official ticketing partners.
+    </p>
+    <p style="margin-top:12px;">
+      Prices displayed on this page are resale prices supplied by the seller
+      and are not represented as official face-value prices.
+    </p>
+    <p style="margin-top:12px;">
+      Ticket availability, seating information, transfer eligibility, and final
+      pricing should be confirmed before any purchase.
+    </p>
+    <p style="margin-top:12px;">
+      This website does not collect payment or card information.
+    </p>
+  </section>
+</main>
+<footer>
+  <p>© 2026 Steven Ticket Marketplace</p>
+  <p style="margin-top:7px;">
+    Independent ticket resale marketplace.
   </p>
-</section>
-<section>
-  <h2>Contact the Seller</h2>
-  <p>Email: <a href="mailto:steveneventticket@gmail.com">steveneventticket@gmail.com</a></p>
-</section>
-  /body>
+</footer>
+</body>
 </html>
-
