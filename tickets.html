@@ -1,172 +1,284 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Available Tickets | Steven Ticket Marketplace</title>
-
+  <title>Ticket Listings | Steven Ticket Marketplace</title>
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
       color: #171717;
       line-height: 1.6;
     }
-
     header {
       background: #111;
       color: white;
       padding: 20px;
       text-align: center;
     }
-
     header h1 {
       font-size: 28px;
+      margin-bottom: 5px;
     }
-
+    header p {
+      color: #ccc;
+    }
+    nav {
+      background: #222;
+      text-align: center;
+      padding: 12px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-size: 14px;
+    }
     .notice {
       background: #fff3cd;
       color: #664d03;
-      padding: 14px 20px;
+      padding: 14px 18px;
       text-align: center;
       font-size: 14px;
     }
-
     .container {
       width: 92%;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 40px auto;
     }
-
-    h2 {
+    .intro {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
     }
-
+    .intro h2 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    .intro p {
+      color: #666;
+    }
     .events {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
-
-    .card {
+    .event-card {
       background: white;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 5px 18px rgba(0,0,0,.08);
     }
-
-    .card h3 {
+    .event-card h3 {
+      font-size: 21px;
       margin-bottom: 15px;
     }
-
     .info {
-      color: #555;
       margin: 7px 0;
+      color: #555;
     }
-
-    .status {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 7px 12px;
-      border-radius: 6px;
-      background: #e8f5e9;
-      color: #256029;
+    .tickets {
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 18px;
+    }
+    .ticket-row {
+      border: 1px solid #ddd;
+      border-radius: 9px;
+      padding: 15px;
+      margin-bottom: 12px;
+    }
+    .ticket-row strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+    .resale-price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+    .availability {
       font-size: 13px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .contact-button {
+      display: block;
+      text-align: center;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      padding: 11px;
+      border-radius: 7px;
       font-weight: bold;
     }
-
-    .contact {
-      background: white;
-      margin-top: 35px;
-      padding: 25px;
-      border-radius: 12px;
-      text-align: center;
+    .contact-button:hover {
+      background: #333;
     }
-
+    .disclaimer {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-top: 40px;
+    }
+    .disclaimer h3 {
+      margin-bottom: 10px;
+    }
     footer {
-      margin-top: 50px;
-      padding: 30px;
       background: #111;
-      color: #bbb;
+      color: #aaa;
       text-align: center;
+      padding: 30px 20px;
+      margin-top: 55px;
       font-size: 13px;
+    }
+    @media (max-width: 600px) {
+      .intro h2 {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
-
 <body>
-
   <header>
     <h1>Steven Ticket Marketplace</h1>
     <p>Independent Ticket Resale</p>
   </header>
-
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="tickets.html">Tickets</a>
+  </nav>
   <div class="notice">
     Independent ticket reseller. This website is not affiliated with or endorsed by
     Matt Rife, his management, venues, or official ticketing partners.
   </div>
-
   <main class="container">
-
-    <h2>Matt Rife — Stay Golden World Tour</h2>
-
-    <div class="events">
-
-      <div class="card">
-        <h3>Mohegan Sun Arena</h3>
-        <p class="info"><strong>Date:</strong> September 4, 2026</p>
-        <p class="info"><strong>Location:</strong> Uncasville, Connecticut</p>
-        <p class="info"><strong>Time:</strong> 8:00 PM</p>
-        <span class="status">Check Availability</span>
-      </div>
-
-      <div class="card">
-        <h3>Mohegan Sun Arena</h3>
-        <p class="info"><strong>Date:</strong> September 5, 2026</p>
-        <p class="info"><strong>Location:</strong> Uncasville, Connecticut</p>
-        <p class="info"><strong>Time:</strong> 8:00 PM</p>
-        <span class="status">Check Availability</span>
-      </div>
-
-      <div class="card">
-        <h3>Choctaw Grand Theater</h3>
-        <p class="info"><strong>Date:</strong> September 25, 2026</p>
-        <p class="info"><strong>Location:</strong> Durant, Oklahoma</p>
-        <p class="info"><strong>Time:</strong> 8:00 PM</p>
-        <span class="status">Check Availability</span>
-      </div>
-
-      <div class="card">
-        <h3>Choctaw Grand Theater</h3>
-        <p class="info"><strong>Date:</strong> September 26, 2026</p>
-        <p class="info"><strong>Location:</strong> Durant, Oklahoma</p>
-        <p class="info"><strong>Time:</strong> 8:00 PM</p>
-        <span class="status">Check Availability</span>
-      </div>
-
-    </div>
-
-    <section class="contact">
-      <h2>Ticket Information</h2>
+    <section class="intro">
+      <h2>Available Ticket Listings</h2>
       <p>
-        Ticket availability, seating, and pricing should be verified before
-        completing any purchase. This website does not collect payment information.
+        Browse the listings below. Prices shown are resale prices and may differ
+        from the original ticket price.
       </p>
     </section>
-
+    <section class="events">
+      <article class="event-card">
+        <h3>Mohegan Sun Arena</h3>
+        <p class="info">
+          <strong>Date:</strong> September 4, 2026
+        </p>
+        <p class="info">
+          <strong>Location:</strong> Uncasville, Connecticut
+        </p>
+        <p class="info">
+          <strong>Time:</strong> 8:00 PM
+        </p>
+        <div class="tickets">
+          <div class="ticket-row">
+            <strong>General Listing</strong>
+            <p>Section and seat details provided before purchase.</p>
+            <div class="resale-price">Contact for current price</div>
+            <div class="availability">Availability must be confirmed.</div>
+            <a class="contact-button" href="#contact">
+              Contact Seller
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="event-card">
+        <h3>Mohegan Sun Arena</h3>
+        <p class="info">
+          <strong>Date:</strong> September 5, 2026
+        </p>
+        <p class="info">
+          <strong>Location:</strong> Uncasville, Connecticut
+        </p>
+        <p class="info">
+          <strong>Time:</strong> 8:00 PM
+        </p>
+        <div class="tickets">
+          <div class="ticket-row">
+            <strong>General Listing</strong>
+            <p>Section and seat details provided before purchase.</p>
+            <div class="resale-price">Contact for current price</div>
+            <div class="availability">Availability must be confirmed.</div>
+            <a class="contact-button" href="#contact">
+              Contact Seller
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="event-card">
+        <h3>Choctaw Grand Theater</h3>
+        <p class="info">
+          <strong>Date:</strong> September 25, 2026
+        </p>
+        <p class="info">
+          <strong>Location:</strong> Durant, Oklahoma
+        </p>
+        <p class="info">
+          <strong>Time:</strong> 8:00 PM
+        </p>
+        <div class="tickets">
+          <div class="ticket-row">
+            <strong>General Listing</strong>
+            <p>Section and seat details provided before purchase.</p>
+            <div class="resale-price">Contact for current price</div>
+            <div class="availability">Availability must be confirmed.</div>
+            <a class="contact-button" href="#contact">
+              Contact Seller
+            </a>
+          </div>
+        </div>
+      </article>
+      <article class="event-card">
+        <h3>Choctaw Grand Theater</h3>
+        <p class="info">
+          <strong>Date:</strong> September 26, 2026
+        </p>
+        <p class="info">
+          <strong>Location:</strong> Durant, Oklahoma
+        </p>
+        <p class="info">
+          <strong>Time:</strong> 8:00 PM
+        </p>
+        <div class="tickets">
+          <div class="ticket-row">
+            <strong>General Listing</strong>
+            <p>Section and seat details provided before purchase.</p>
+            <div class="resale-price">Contact for current price</div>
+            <div class="availability">Availability must be confirmed.</div>
+            <a class="contact-button" href="#contact">
+              Contact Seller
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section class="disclaimer" id="contact">
+      <h3>Ticket & Resale Information</h3>
+      <p>
+        This website is operated by an independent ticket reseller and is not
+        affiliated with or endorsed by Matt Rife, his management, the venues,
+        promoters, or official ticketing partners.
+      </p>
+      <p style="margin-top: 12px;">
+        Ticket availability, seating information, pricing, and transfer
+        eligibility should be verified before any purchase.
+      </p>
+      <p style="margin-top: 12px;">
+        This page does not collect payment or card information.
+      </p>
+    </section>
   </main>
-
   <footer>
     <p>© 2026 Steven Ticket Marketplace</p>
-    <p>Independent ticket resale marketplace.</p>
+    <p style="margin-top: 7px;">Independent ticket resale marketplace.</p>
   </footer>
-
 </body>
 </html>
