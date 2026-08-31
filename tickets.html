@@ -736,5 +736,20 @@
   priceFilter.addEventListener("change", filterTickets);
   filterTickets();
 </script>
+<script>
+  const sellerEmail = "kkentucky441@gmail.com";
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.href = link.href.replace(
+      "steveneventticket@gmail.com",
+      sellerEmail
+    );
+  });
+
+  document.querySelectorAll("a.email").forEach(link => {
+    link.href = "mailto:" + sellerEmail;
+    link.textContent = sellerEmail;
+  });
+</script>
 </body>
 </html>
