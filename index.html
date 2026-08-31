@@ -1,106 +1,272 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Matt Rife — Stay Golden | Ticket Request</title>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:#0b0b0d;color:#fff}
-header{padding:70px 20px 55px;text-align:center;background:linear-gradient(135deg,#16131b,#0b0b0d)}
-.badge{display:inline-block;border:1px solid #555;border-radius:30px;padding:8px 15px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
-h1{font-size:clamp(42px,8vw,82px);margin:20px 0 8px;line-height:.95}
-h2{font-size:30px;margin-top:0}.gold{color:#f3c969}.sub{color:#c8c8cc;max-width:650px;margin:15px auto 28px;line-height:1.6}
-.btn{display:inline-block;background:#f3c969;color:#111;text-decoration:none;font-weight:800;padding:15px 24px;border-radius:10px}
-.wrap{max-width:1050px;margin:auto;padding:45px 18px}.notice{background:#17171b;border:1px solid #303036;border-radius:14px;padding:16px;color:#bbb;font-size:13px;line-height:1.5;margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
-.card{background:#151519;border:1px solid #29292f;border-radius:16px;padding:20px}.date{font-weight:800;font-size:19px}.venue{color:#ddd;margin:8px 0}.time{color:#aaa}.price{margin-top:15px;font-weight:800}.card button{width:100%;margin-top:16px;padding:12px;border:0;border-radius:9px;background:#fff;color:#111;font-weight:800;cursor:pointer}
-section.form{margin-top:45px;background:#151519;border-radius:18px;padding:25px}
-label{display:block;margin:14px 0 7px;color:#ddd;font-weight:700}input,select{width:100%;padding:13px;border-radius:8px;border:1px solid #39393f;background:#0d0d10;color:#fff}
-.total{font-size:21px;font-weight:800;margin:20px 0}.submit{width:100%;padding:15px;border:0;border-radius:9px;background:#f3c969;font-weight:900;cursor:pointer}
-footer{text-align:center;padding:35px 18px;color:#888;font-size:12px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steven Ticket Marketplace</title>
+  <meta name="description" content="Independent ticket resale marketplace.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #171717;
+      line-height: 1.6;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+    .notice {
+      background: #fff3cd;
+      color: #664d03;
+      padding: 14px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .hero {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 8vw, 70px);
+      margin-bottom: 8px;
+    }
+    .hero h2 {
+      font-size: clamp(22px, 4vw, 34px);
+      margin-bottom: 18px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      color: #ddd;
+    }
+    .hero-button {
+      display: inline-block;
+      background: white;
+      color: #111;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      width: min(1100px, 92%);
+      margin: 45px auto;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    .events {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 22px;
+    }
+    .event-card {
+      background: white;
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+    .event-card h3 {
+      font-size: 21px;
+      margin-bottom: 14px;
+    }
+    .event-info {
+      color: #555;
+      margin: 7px 0;
+    }
+    .price {
+      font-size: 23px;
+      font-weight: bold;
+      margin: 18px 0;
+    }
+    .buy-button {
+      display: block;
+      width: 100%;
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 13px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .buy-button:hover {
+      background: #333;
+    }
+    .info-section {
+      background: white;
+      border-radius: 14px;
+      padding: 32px;
+      margin-top: 45px;
+    }
+    .info-section h2 {
+      margin-bottom: 12px;
+    }
+    footer {
+      background: #111;
+      color: #bbb;
+      text-align: center;
+      padding: 35px 20px;
+      margin-top: 60px;
+      font-size: 13px;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    @media (max-width: 650px) {
+      header {
+        flex-direction: column;
+      }
+      nav a {
+        margin: 0 7px;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-<div class="badge">Ticket Request Website</div>
-<h1>MATT RIFE</h1>
-<h2 class="gold">STAY GOLDEN WORLD TOUR</h2>
-<p class="sub">Select a show below and submit a ticket request. Ticket price shown on this page is $500 per ticket.</p>
-<a class="btn" href="#shows">VIEW SHOWS</a>
-</header>
-
-<main class="wrap">
-<div class="notice"><strong>Important:</strong> This page is an independent ticket-request template and is not presented as Matt Rife's official website, management, promoter, venue, or authorized ticket seller. Only accept payments if you are authorized to sell the tickets and have a legitimate payment/fulfillment process.</div>
-
-<h2 id="shows">Upcoming Shows</h2>
-<div class="grid" id="showGrid"></div>
-
-<section class="form" id="request">
-<h2>Request Tickets</h2>
-<form id="ticketForm">
-<label for="show">Select show</label>
-<select id="show" required></select>
-<label for="qty">Number of tickets</label>
-<select id="qty">
-<option value="1">1 ticket</option><option value="2">2 tickets</option>
-<option value="3">3 tickets</option><option value="4">4 tickets</option>
-<option value="5">5 tickets</option><option value="6">6 tickets</option>
-</select>
-<label for="name">Full name</label><input id="name" required>
-<label for="email">Email</label><input id="email" type="email" required>
-<label for="phone">Phone</label><input id="phone" type="tel">
-<div class="total" id="total">$500</div>
-<button class="submit" type="submit">SUBMIT TICKET REQUEST</button>
-</form>
-<p id="result" style="color:#f3c969;font-weight:700"></p>
-</section>
-</main>
-
-<footer>Ticket-request template • Verify event details and authorization before accepting money.</footer>
-
-<script>
-const price=500;
-const shows=[
-["Sept. 4, 2026","Uncasville, CT","Mohegan Sun Arena","8:00 PM"],
-["Sept. 5, 2026","Uncasville, CT","Mohegan Sun Arena","8:00 PM"],
-["Sept. 25, 2026","Durant, OK","Choctaw Grand Theater","8:00 PM"],
-["Sept. 26, 2026","Durant, OK","Choctaw Grand Theater","8:00 PM"],
-["Sept. 27, 2026","Rogers, AR","Walmart AMP","7:30 PM"],
-["Oct. 9, 2026","Nampa, ID","Ford Idaho Center Arena","8:00 PM"],
-["Oct. 10, 2026","Portland, OR","Moda Center","8:00 PM"],
-["Oct. 11, 2026","Sacramento, CA","Golden 1 Center","7:00 PM"],
-["Oct. 18, 2026","Morrison, CO","Red Rocks Amphitheatre","7:00 PM"],
-["Oct. 24, 2026","Nashville, TN","Bridgestone Arena","8:00 PM"],
-["Oct. 25, 2026","Brandon, MS","Brandon Amphitheater","7:30 PM"],
-["Nov. 7, 2026","Milwaukee, WI","Fiserv Forum","8:00 PM"],
-["Nov. 8, 2026","Indianapolis, IN","Gainbridge Fieldhouse","7:00 PM"],
-["Nov. 20, 2026","Belmont Park, NY","UBS Arena","8:00 PM"],
-["Nov. 21, 2026","Buffalo, NY","KeyBank Center","8:00 PM"],
-["Nov. 22, 2026","Toronto, Canada","Scotiabank Arena","7:00 PM"],
-["Dec. 4, 2026","Las Vegas, NV","Dolby Live","8:00 PM"],
-["Dec. 18, 2026","Fort Worth, TX","Dickies Arena","8:00 PM"],
-["Dec. 19, 2026","Fort Worth, TX","Dickies Arena","8:00 PM"],
-["Dec. 26, 2026","Phoenix, AZ","Mortgage Matchup Center","8:00 PM"],
-["Dec. 27, 2026","Phoenix, AZ","Mortgage Matchup Center","7:00 PM"],
-["Jan. 7, 2027","Chicago, IL","United Center","8:00 PM"]
-];
-
-const grid=document.getElementById("showGrid"), select=document.getElementById("show");
-shows.forEach((s,i)=>{
-  const card=document.createElement("div"); card.className="card";
-  card.innerHTML=`<div class="date">${s[0]}</div><div class="venue">${s[1]} · ${s[2]}</div><div class="time">${s[3]}</div><div class="price">$${price} per ticket</div><button onclick="choose(${i})">REQUEST TICKETS</button>`;
-  grid.appendChild(card);
-  const opt=document.createElement("option"); opt.value=i; opt.textContent=`${s[0]} — ${s[1]} — ${s[2]}`; select.appendChild(opt);
-});
-function choose(i){select.value=i;document.getElementById("request").scrollIntoView({behavior:"smooth"});}
-function updateTotal(){document.getElementById("total").textContent="$"+(price*Number(document.getElementById("qty").value)).toLocaleString();}
-document.getElementById("qty").addEventListener("change",updateTotal);
-document.getElementById("ticketForm").addEventListener("submit",e=>{
- e.preventDefault();
- const name=document.getElementById("name").value;
- const qty=document.getElementById("qty").value;
- document.getElementById("result").textContent=`Thanks, ${name}. Your request for ${qty} ticket(s) has been recorded on this demo page. Connect the form to your authorized ticketing/payment system before accepting orders.`;
-});
-</script>
+  <header>
+    <div class="logo">Steven Ticket Marketplace</div>
+    <nav>
+      <a href="#events">Tickets</a>
+      <a href="tickets.html">All Events</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="notice">
+    Independent ticket reseller. This website is not affiliated with or endorsed by
+    Matt Rife, his management, venues, or official ticketing partners.
+  </div>
+  <section class="hero">
+    <h1>Matt Rife</h1>
+    <h2>Stay Golden World Tour</h2>
+    <p>
+      Browse event information and available ticket listings from an independent
+      ticket reseller.
+    </p>
+    <a class="hero-button" href="tickets.html">
+      View Tickets
+    </a>
+  </section>
+  <main class="container" id="events">
+    <h2 class="section-title">Featured Events</h2>
+    <div class="events">
+      <article class="event-card">
+        <h3>Mohegan Sun Arena</h3>
+        <p class="event-info">
+          <strong>Date:</strong> September 4, 2026
+        </p>
+        <p class="event-info">
+          <strong>Location:</strong> Uncasville, Connecticut
+        </p>
+        <p class="event-info">
+          <strong>Time:</strong> 8:00 PM
+        </p>
+        <div class="price">View Availability</div>
+        <a class="buy-button" href="tickets.html">
+          View Tickets
+        </a>
+      </article>
+      <article class="event-card">
+        <h3>Mohegan Sun Arena</h3>
+        <p class="event-info">
+          <strong>Date:</strong> September 5, 2026
+        </p>
+        <p class="event-info">
+          <strong>Location:</strong> Uncasville, Connecticut
+        </p>
+        <p class="event-info">
+          <strong>Time:</strong> 8:00 PM
+        </p>
+        <div class="price">View Availability</div>
+        <a class="buy-button" href="tickets.html">
+          View Tickets
+        </a>
+      </article>
+      <article class="event-card">
+        <h3>Choctaw Grand Theater</h3>
+        <p class="event-info">
+          <strong>Date:</strong> September 25, 2026
+        </p>
+        <p class="event-info">
+          <strong>Location:</strong> Durant, Oklahoma
+        </p>
+        <p class="event-info">
+          <strong>Time:</strong> 8:00 PM
+        </p>
+        <div class="price">View Availability</div>
+        <a class="buy-button" href="tickets.html">
+          View Tickets
+        </a>
+      </article>
+      <article class="event-card">
+        <h3>Choctaw Grand Theater</h3>
+        <p class="event-info">
+          <strong>Date:</strong> September 26, 2026
+        </p>
+        <p class="event-info">
+          <strong>Location:</strong> Durant, Oklahoma
+        </p>
+        <p class="event-info">
+          <strong>Time:</strong> 8:00 PM
+        </p>
+        <div class="price">View Availability</div>
+        <a class="buy-button" href="tickets.html">
+          View Tickets
+        </a>
+      </article>
+    </div>
+    <section class="info-section">
+      <h2>About This Marketplace</h2>
+      <p>
+        Steven Ticket Marketplace is an independent ticket resale website.
+        We are not the official Matt Rife website, tour promoter, venue,
+        management company, or official ticketing partner.
+      </p>
+      <p style="margin-top: 12px;">
+        Event information and ticket availability should be verified before
+        making any purchase.
+      </p>
+    </section>
+    <section class="info-section" id="contact">
+      <h2>Contact</h2>
+      <p>
+        For questions about ticket listings, please use the contact information
+        provided by the independent seller.
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2026 Steven Ticket Marketplace</p>
+    <p style="margin-top: 8px;">
+      Independent ticket resale marketplace.
+    </p>
+  </footer>
 </body>
 </html>
