@@ -326,6 +326,18 @@
   </p>
 
 </footer>
+<script>
+  document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+    link.href = link.href.replace(
+      "steveneventticket@gmail.com",
+      "kkentucky441@gmail.com"
+    );
+  });
 
+  document.querySelectorAll("a.email").forEach(link => {
+    link.href = "mailto:kkentucky441@gmail.com";
+    link.textContent = "kkentucky441@gmail.com";
+  });
+</script>
 </body>
 </html>
