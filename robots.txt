@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://matts485.github.io/steven-rife-m-even-ticket-shop/sitemap.xml
