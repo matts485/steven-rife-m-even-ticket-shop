@@ -350,5 +350,22 @@
     Independent resale service — not an official event or ticketing website.
   </p>
 </footer>
+<script>
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+    link.href = link.href.replace(
+      "steveneventticket@gmail.com",
+      "kkentucky441@gmail.com"
+    );
+  });
+
+  document.querySelectorAll("*").forEach(function(element) {
+    if (element.children.length === 0) {
+      element.textContent = element.textContent.replace(
+        /steveneventticket@gmail\.com/g,
+        "kkentucky441@gmail.com"
+      );
+    }
+  });
+</script>
 </body>
 </html>
